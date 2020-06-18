@@ -16,8 +16,8 @@ class ClientAnswer extends Model {
   }
 
   static associate = (models) => {
-    this.belongsTo(models.Client, { foreignKey: 'client_id' });
-    this.belongsTo(models.Answer, { foreignKey: 'answer_id' });
+    this.belongsTo(models.Client, { foreignKey: 'client_id', as: 'client' });
+    this.belongsTo(models.Answer, { foreignKey: 'answer_id', as: 'answer' });
   };
 }
 

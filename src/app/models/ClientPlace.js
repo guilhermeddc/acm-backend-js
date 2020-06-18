@@ -16,8 +16,8 @@ class ClientPlace extends Model {
   }
 
   static associate = (models) => {
-    this.belongsTo(models.Client, { foreignKey: 'client_id' });
-    this.belongsTo(models.Place, { foreignKey: 'place_id' });
+    this.belongsTo(models.Client, { foreignKey: 'client_id', as: 'client' });
+    this.belongsTo(models.Place, { foreignKey: 'place_id', as: 'place' });
   };
 }
 
